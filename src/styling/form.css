@@ -1,0 +1,14 @@
+.area_form_login {
+    position: relative;
+    -webkit-box-shadow: inset 6px -2px 13px -3px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 6px -2px 13px -3px rgba(0,0,0,0.5);
+box-shadow: inset 6px -2px 13px -3px rgba(0,0,0,0.5);
+}
+
+.area_form_register {
+    position: relative;
+    -webkit-box-shadow: inset -4px 0px 13px -3px rgba(0,0,0,0.5);
+-moz-box-shadow: inset -4px 0px 13px -3px rgba(0,0,0,0.5);
+box-shadow: inset -4px 0px 13px -3px rgba(0,0,0,0.5);
+}
+
