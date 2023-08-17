@@ -7,11 +7,13 @@ export default function Login_Main() {
         <>
             <Area_BgImage />
 
-            <section className='area_form_login grid place-content-center '>
+            <section className='area_form_login h-full grid p-12 sm:p-0 sm:place-content-center 
+            bg-[url("https://unsplash.com/photos/-IlmDnJg5cg/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTV8fGNsb3RoZXN8ZW58MHx8fHwxNjkyMjAwNDc3fDA&force=true&w=640")]
+            bg-cover bg-center sm:bg-none'>
                 <h1 className='text-xl text-center font-bold uppercase '><span className='bg-primary_bgcolor p-3 px-0 -rotate-2 inline-block'>AnggaStore.</span></h1>
                 <Form />
-                <div className='px-7 text-[12px] font-light'>
-                    <div className='flex items-center mt-4 justify-between'>
+                <div className='px-7 text-[12px] font-bold text-white drop-shadow sm:font-light sm:text-primary_color sm:drop-shadow-none '>
+                    <div className='flex items-center mt-4 gap-2 justify-between'>
                     <p > <a href='#'> Lost your Password? </a></p>
                     <p  id='linksss'>
                         <NavLink to={'/signup'} 

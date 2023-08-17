@@ -8,7 +8,7 @@ import Close_Hamburger from "@/Components/HEADER/atoms/close_hamburger";
 
 
 export default function Navigasi() {
-    const [switchMenu,setSwitchMenu] = useState<Boolean>(false)
+    const [switchMenu,setSwitchMenu] = useState<Boolean>(true)
 
     // Mobile Menu Switch
     function Switch_MenuMobile (isActive : String) {

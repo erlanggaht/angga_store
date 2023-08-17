@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <>
       <Helmet_Title title={titles.login} />
-      <div className="grid grid-cols-2 h-screen bg-secondary_bgcolor ">
+      <div className="sm:grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 h-screen bg-secondary_bgcolor ">
         <Login_Main />
       </div>
     </>

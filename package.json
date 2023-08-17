@@ -22,7 +22,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.15.0",
     "sort-by": "^0.0.2",
-    "yup": "^1.2.0"
+    "yup": "^1.2.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.22.5",

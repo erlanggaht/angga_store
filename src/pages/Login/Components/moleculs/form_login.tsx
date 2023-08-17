@@ -1,5 +1,5 @@
 import Input from '@/pages/Login/Components/atoms/input';
-import Formik_Component from '@/validation/formik/formik_login';
+import Formik_Login from '@/validation/formik/formik_login';
 import { Form as Form_Login } from 'formik';
 
 
@@ -8,7 +8,7 @@ export default function Form() {
 
   return (
     <>
-      <Formik_Component >
+      <Formik_Login >
       {({ errors } : any) => (
         <Form_Login className='mt-5 text-center bg-primary_bgcolor p-6 border border-border_color' autoComplete='on'>
             <div className='area_username_input flex flex-col text-left'>
@@ -33,7 +33,7 @@ export default function Form() {
             </div>
         </Form_Login>
       )}
-      </Formik_Component>
+      </Formik_Login>
     </>
   )
 }
