@@ -1,6 +1,16 @@
 
+// Lazy Image Loader
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { afterLoadingImage, beforeLoadingImage } from '@/utility/loader_image';
+import spinner from '@/assets/spinner.svg'
+
+// Image Carousel
+import carousel_image from '@/assets/exported/carousel';
+const {carousel1,carousel2,carousel3} = carousel_image
 
 export default function Carousel() {
+
+ 
   return (
     <>
     <div>
@@ -17,8 +27,18 @@ export default function Carousel() {
       <input type="radio" name="radio-buttons" id="img-1" checked />
       <li className="slide-container">
         <div className="slide-image">
-       
-          <img src=" https://unsplash.com/photos/ToLMORRb97Q/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8Y2xvdGhpbmd8ZW58MHx8fHwxNjkxNzMzOTY1fDA&force=true&w=1920"/>
+        <LazyLoadImage
+      alt={carousel1.alt}
+      src={carousel1.src} 
+      height={'100%'}
+      width={'100%'}       
+      placeholderSrc={spinner}
+      wrapperClassName='lazy-loader'
+      beforeLoad={() => beforeLoadingImage()}
+      afterLoad={() => afterLoadingImage()}
+      effect='blur'
+     />
+      <span>{carousel1.caption_span}</span>
         </div>
         <div className="carousel-controls">
           <label htmlFor="img-3" className="prev-slide">
@@ -32,8 +52,17 @@ export default function Carousel() {
       <input type="radio" name="radio-buttons" id="img-2" />
       <li className="slide-container">
         <div className="slide-image">
-      
-          <img src=" https://unsplash.com/photos/NnPiILRe7pY/download?force=true&w=1920"/>
+        <LazyLoadImage
+      alt={carousel2.alt}
+      src={carousel2.src} 
+      height={'100%'}
+      width={'100%'}  
+      wrapperClassName='lazy-loader'
+      placeholderSrc={spinner}
+      beforeLoad={() => beforeLoadingImage()}
+      afterLoad={() => afterLoadingImage()}
+      effect='blur' />
+      <span>{carousel2.caption_span}</span>
         </div>
         <div className="carousel-controls">
           <label htmlFor="img-1" className="prev-slide">
@@ -47,7 +76,18 @@ export default function Carousel() {
       <input type="radio" name="radio-buttons" id="img-3" />
       <li className="slide-container">
         <div className="slide-image">
-          <img src="https://unsplash.com/photos/VsK6LyEBFFo/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTh8fE5JS0UlMjBIRHxlbnwwfHx8fDE2OTE3NzczMjZ8MA&force=true&w=1920"/>
+        <LazyLoadImage
+      alt={carousel3.alt}
+      src={carousel3.src} 
+      height={'100%'}
+      width={'100%'}  
+      wrapperClassName='lazy-loader'
+      placeholderSrc={spinner}
+      beforeLoad={() => beforeLoadingImage()}
+      afterLoad={() => afterLoadingImage()}
+      effect='blur'
+      />
+      <span>{carousel3.caption_span}</span>
         </div>
         <div className="carousel-controls">
           <label htmlFor="img-2" className="prev-slide">

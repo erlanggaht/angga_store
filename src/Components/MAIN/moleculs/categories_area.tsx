@@ -18,7 +18,6 @@ export default memo(function Categories_Area({
     hidden
 } : TCategories_Area) {
 
-        console.log(bg_active)
     return (
         <>
             <div className="categories_area flex items-center ">

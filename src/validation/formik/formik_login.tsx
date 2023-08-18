@@ -1,20 +1,24 @@
 import { Formik } from 'formik';
-import { LoginSchema, Login_InitialValues } from './schema/login';
-import useUsers from '@/store/create_store';
+import { LoginSchema, Login_InitialValues } from '@/validation/formik/schema/login';
+import useUsers from '@/store/useregister_store';
 
 
 export default function Formik_Login({children} : any) {
   const [users] = useUsers((state) => [state.users])
 
-
-  async function LoginSubmit(values : any) {
+   function LoginSubmit(values : any) {
     var validasi_user = false
     users.forEach(function(m :any) {
         if(m.username == values.username || m.password == values.password) validasi_user = true 
         else validasi_user = false
       })
       
-      validasi_user ? alert('login success') : alert('wrong username and password')
+      if(validasi_user) {
+        alert('login success')
+        location.href ='/'
+
+        // location.href ='/'
+      }else  alert('wrong username and password')
   }
 
   return (

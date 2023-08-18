@@ -2,11 +2,12 @@ import Form from '@/pages/Register/Components/moleculs/form_register';
 import Area_BgImage from '@/pages/Register/Components/atoms/area_bgImage';
 import { NavLink } from "react-router-dom";
 
+
 export default function Register_Main() {
     return (
         <>
 
-            <section className='area_form h-full grid p-12 sm:p-0 sm:place-content-center 
+            <section className='area_form grid p-12 sm:p-0 sm:place-content-center 
             bg-[url("https://unsplash.com/photos/Yy4sN6QzboU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fGNsb3RoZXN8ZW58MHx8fHwxNjkyMTM2NjU5fDA&force=true&w=640")]
             bg-cover bg-center sm:bg-none'>
                 <h1 className='text-xl text-center font-bold uppercase '><span className='bg-primary_bgcolor p-3 px-0 -rotate-2 inline-block'>AnggaStore.</span></h1>

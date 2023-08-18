@@ -17,8 +17,9 @@ export default function Home() {
             <header className="text-primary_color">
                 {/* Navigasi */}
                 <div className="fixed bg-primary_bgcolor w-full z-[999999]  shadow text-right">
-                    <NavLink to={'/login'} className="p-3 px-4 inline-block hover:underline text-md bg-secondary_bgcolor">Login</NavLink>
-                    <NavLink to={'/signup'} className="p-3 px-4 inline-block hover:underline text-md bg-secondary_bgcolor border-l border-border-[#222]">Signup</NavLink>
+                     <NavLink to={'/login'} className="p-3 px-4 inline-block hover:underline text-md bg-secondary_bgcolor">Login</NavLink> 
+                    
+                   <NavLink to={'/signup'} className="p-3 px-4 inline-block hover:underline text-md bg-secondary_bgcolor border-l border-border-[#222]">Signup</NavLink> 
                 </div>
                 <Navigasi />
 

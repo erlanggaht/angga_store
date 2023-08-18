@@ -1,10 +1,25 @@
+// Lazy Image Loader
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import spinner from '@/assets/spinner.svg'
+import { afterLoadingImage, beforeLoadingImage } from '@/utility/loader_image';
+
 
 export default function Area_BgImage() {
   return (
     <>
-          <section className='area_bgImage relative
-        before:bg-[url("https://unsplash.com/photos/Yy4sN6QzboU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fGNsb3RoZXN8ZW58MHx8fHwxNjkyMTM2NjU5fDA&force=true&w=640")]
-        before:absolute before:h-full before:bg-cover before:bg-center before:w-full before:grayscale-[80%] before:hover:grayscale-0'>
+          <section className='area_bgImage hidden sm:block h-screen'>
+            <LazyLoadImage
+          alt={'background_login'}
+          src={'https://unsplash.com/photos/Yy4sN6QzboU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fGNsb3RoZXN8ZW58MHx8fHwxNjkyMTM2NjU5fDA&force=true&w=640'}
+          height={'100%'}
+          width={'100%'}
+          wrapperClassName='lazy-loader'
+          placeholderSrc={spinner}
+          beforeLoad={() => beforeLoadingImage()}
+          afterLoad={() => afterLoadingImage()}
+          effect='blur'
+          className='grayscale-[80%] hover:grayscale-0 bg-white h-full w-full'
+        />
         </section>
     </>
   )

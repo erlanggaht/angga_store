@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { RegisterSchema, Register_InitialValues } from './schema/register';
 import { useNavigate } from 'react-router-dom';
-import useUsers from '@/store/create_store';
+import useUsers from '@/store/useregister_store';
 
 export default function Formik_Register({children} : any) {
   const [users,add_user] = useUsers((state : any) : [any,any] => [state.users,state.add_user])
@@ -17,12 +17,13 @@ export default function Formik_Register({children} : any) {
     if(!validasi_username) {
       add_user(values)
       localStorage.setItem('databases',JSON.stringify(users))
+      alert('register success!')
       setTimeout(() => {
         navigate('/login')
-      },2000)
+      },1200)
         
     }
-    else alert('username tidak boleh sama')
+    else alert('username not match')
   }
 
   
