@@ -7,7 +7,7 @@ export default function Login_Main() {
         <>
             <Area_BgImage />
 
-            <section className='area_form_login  grid p-12 sm:p-0 sm:place-content-center 
+            <section className='area_form_login  grid p-12 sm:p-0 sm:place-content-center h-screen sm:h-full
             bg-[url("https://unsplash.com/photos/-IlmDnJg5cg/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTV8fGNsb3RoZXN8ZW58MHx8fHwxNjkyMjAwNDc3fDA&force=true&w=640")]
             bg-cover bg-center sm:bg-none'>
                 <h1 className='text-xl text-center font-bold uppercase '><span className='bg-primary_bgcolor p-3 px-0 -rotate-2 inline-block'>AnggaStore.</span></h1>
