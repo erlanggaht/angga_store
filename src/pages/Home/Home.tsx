@@ -4,15 +4,39 @@ import Main_Area1 from "@/Components/MAIN/organism/main_area1";
 import Main_Area2 from "@/Components/MAIN/organism/main_area2";
 import Main_Area3 from "@/Components/MAIN/organism/main_area3";
 import Main_Area4 from "@/Components/MAIN/organism/main_area4";
+import LoadingPage from "@/LoadingPage";
 import Helmet_Title, { titles } from "@/utility/helmet_title";
+import { useEffect, useState } from "react";
 import {NavLink} from 'react-router-dom'
+import '@/styling/loading_page.css'
 
 export default function Home() {
+    const [loading,setLoading] = useState(false)
+
+
+    // Loading Page
+  useEffect(() => {
+    setLoading(true); 
+    setTimeout(() => {
+        setLoading(false)
+        document.body.style.overflow ='auto'
+    }, 5300)
+    document.body.style.overflow ='hidden'
+    return () => {
+       
+    }
+  }, []);
+
     return (
         <>
 
+    
                     {/* Title  */}
                     <Helmet_Title title={titles.home} />
+
+
+                {/* Loding Page */}
+                {loading && <LoadingPage />}
 
             <header className="text-primary_color">
                 {/* Navigasi */}
